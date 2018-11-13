@@ -1,8 +1,6 @@
 package org.flightdata;
 
-import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
 /**
@@ -22,6 +20,7 @@ public class FlightDataApplication {
 		}
 	}
 	private static void processData(String fileName) {
+		System.out.println("fileName : " + fileName);
 		SparkSession spark =  SparkSession
 				.builder()
 				.appName("FlightDataJob")

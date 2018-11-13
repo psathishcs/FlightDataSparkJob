@@ -22,8 +22,6 @@ dependencies {
    	compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.3.2'
 	compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: '2.3.2'
 	compile group: 'org.apache.spark', name: 'spark-hive_2.11', version: '2.3.2'
-	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
-    
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
 }
