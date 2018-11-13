@@ -11,7 +11,7 @@ import org.apache.spark.sql.SparkSession;
  */
 public class FlightDataApplication {
 	public static void main(String[] args) {
-		String  fileName ="/home/psathishcs/datasets/RITA/2007.csv";
+		String  fileName ="/user/psathishcs/datasets/RITA/2007.csv";
 		processData(fileName);
 	}
 	
