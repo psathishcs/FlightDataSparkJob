@@ -1,6 +1,7 @@
 package org.flightdata;
 
 import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 
 /**
@@ -27,5 +28,6 @@ public class FlightDataApplication {
 		Dataset  inputFile =  spark.read().option("header", "true").csv("hdfs://localhost:9000/"+fileName);
 		inputFile.show();
 		System.out.println("inputFile.count() : " + inputFile.count()); 
+		inputFile.write().mode(SaveMode.Overwrite).saveAsTable("datasets.flight_data");
 	}
 }
