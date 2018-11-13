@@ -6,17 +6,10 @@
  * user guide available at https://docs.gradle.org/4.10.2/userguide/tutorial_java_projects.html
  */
 
-plugins {
-    // Apply the java plugin to add support for Java
-    id 'java'
-
-    // Apply the application plugin to add support for building an application
-    id 'application'
-    
-    // Apply the eclipse plugin to add support for building an application
-    id 'eclipse'
-}
-
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin:'application'
+mainClassName = "org.flightdata.FlightDataApplication"
 
 dependencies {
    	compile group: 'org.apache.spark', name: 'spark-core_2.11', version: '2.3.2'
