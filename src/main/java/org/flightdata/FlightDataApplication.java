@@ -11,14 +11,10 @@ import org.apache.spark.sql.SparkSession;
  */
 public class FlightDataApplication {
 	public static void main(String[] args) {
-		String fileName = args[0];
-		if (args.length == 0) {
-			if (args.length == 0) {
-				 fileName ="/home/psathishcs/datasets/RITA/2007.csv";
-			}
-			processData(fileName);
-		}
+		String  fileName ="/home/psathishcs/datasets/RITA/2007.csv";
+		processData(fileName);
 	}
+	
 	private static void processData(String fileName) {
 		System.out.println("fileName : " + fileName);
 		SparkSession spark =  SparkSession
