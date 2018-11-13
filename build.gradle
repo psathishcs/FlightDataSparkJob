@@ -35,7 +35,7 @@ repositories {
     jcenter()
 }
 task(runFlightDataJob, dependsOn: 'classes', type: JavaExec) {
-   main = 'org.hello.spark.HelloWordCount'
+   main = 'org.flightdata.FlightDataApplication'
    classpath = sourceSets.main.runtimeClasspath
    args '/home/psathishcs/datasets/RITA/2007.csv'
    systemProperty 'simple.message', 'Hellom, World: Word Count!'
