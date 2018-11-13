@@ -24,7 +24,7 @@ public class FlightDataApplication {
 				.config("hive.metastore.uris", "thrift://localhost:9083")
 				.enableHiveSupport()
 				.getOrCreate();
-		Dataset  inputFile =  spark.read().csv("hdfs://localhost:9000/"+fileName);
+		Dataset  inputFile =  spark.read().option("header", "true").csv("hdfs://localhost:9000/"+fileName);
 		inputFile.show();
 		System.out.println("inputFile.count() : " + inputFile.count()); 
 	}
