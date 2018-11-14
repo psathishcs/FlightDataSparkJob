@@ -25,3 +25,10 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+task runFlightDataApp (type: JavaExec) {
+   main = 'org.flightdata.FlightDataApplication'
+   classpath = sourceSets.main.runtimeClasspath
+   args 'user/psathishcs/datasets/RITA/2007.csv'
+   systemProperty 'simple.message', 'Hellom, World: Word Count!'
+}

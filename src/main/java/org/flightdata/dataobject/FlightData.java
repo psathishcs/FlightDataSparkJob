@@ -39,6 +39,7 @@ public class FlightData implements Serializable {
 	private String nas_delay;
 	private String security_delay;
 	private String late_aircraft_delay;
+	
 	public Integer getYear() {
 		return year;
 	}
