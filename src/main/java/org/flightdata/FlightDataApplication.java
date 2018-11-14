@@ -22,7 +22,7 @@ public class FlightDataApplication {
 				.builder()
 				.appName("FlightDataJob")
 				.config("spark.master", "local")
-				.config("hive.metastore.uris", "thrift://localhost:9083")
+				.config("hive.metastore.uris", "thrift://skylark.datalake:9083")
 				.enableHiveSupport()
 				.getOrCreate();
 		Dataset  inputFile =  spark.read().option("header", "true").csv("hdfs://skylark.datalake:9000/"+fileName);
