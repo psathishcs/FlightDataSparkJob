@@ -25,6 +25,6 @@ public class FlightDataWithPartitionApplication {
 		Dataset  inputFile =  spark.read().option("header", "true").csv("hdfs://skylark.datalake:9000/"+fileName);
 		inputFile.show();
 		System.out.println("inputFile.count() : " + inputFile.count()); 
-		inputFile.write().mode(SaveMode.Overwrite).saveAsTable("flight.flight_data_partition_by_month");
+		inputFile.write().mode(SaveMode.Overwrite).partitionBy("month").saveAsTable("flight.flight_data_partition_by_month");
 	}
 }
